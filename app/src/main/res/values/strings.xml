@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ApiApp</string>
+    <string name="hint_translation">Text for translation &#8230;</string>
+    <string name="label_button_translate">TRANSLATE</string>
+</resources>
