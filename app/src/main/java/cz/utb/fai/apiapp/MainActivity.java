@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     EditText editText;
+    String staryText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getTranslationOnClick(View v) {
+        if(staryText == editText.getText().toString()){
+            textView.setText("Prekladany text se nezmenil!");
+            return;
+        }
+        staryText = editText.getText().toString();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://api.mymemory.translated.net/get?q=" + editText.getText().toString() + "&langpair=en|cs";
